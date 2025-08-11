@@ -1,0 +1,19 @@
+# 测试配置文件
+common:
+  log_level: "debug"
+  log_file: ""
+  admin_addr: "127.0.0.1:8888"
+  node_name: "test-proxy-node"
+
+listeners:
+  - name: "test-listener"
+    bind: "127.0.0.1:8080"
+
+routes:
+  - name: "test-route"
+    match:
+      port: 8080
+      protocol: "tcp"
+    target: "127.0.0.1:8081"
+
+peers: []
